@@ -1,0 +1,200 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.filter{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 0;
+opacity: .7;
+background-color: rgb(192, 17, 186);
+}
+
+.deletebutton{
+  padding: 15px 20px;
+background-color: #d50606;
+color: white;
+border: none;
+cursor: pointer;
+float: left;
+text-align: center;
+}
+
+table{
+  margin-top: 50px;
+  margin-left: 190px;
+  width: 70%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 12px 12px 0 0;
+  background-color: #fafafa;
+  overflow: auto;
+  box-shadow: 0 8px 12px rgba(32,32,32,.3);
+  text-align: center;
+  max-height: calc(100vh - 100px);
+  }
+
+th{
+background: #591665;
+color: aliceblue;
+text-transform: uppercase;
+font-family: 'roboto', sans-serif;
+
+}
+.Contenttd{
+  width: 850px
+}
+
+td{
+font-family: 'Open Sans',sans-serif;
+
+}
+
+th, td{
+padding: 10px 15px;
+}
+
+tr:nth-child(odd){
+background-color: #eeeeee;
+}
+button, .actions {
+padding: 10px 15px;
+background-color: #2d1fc5;
+color: white;
+border: none;
+cursor: pointer;
+float: left;
+text-align: center;
+font-family: "Times New Roman", Times, serif;
+}
+
+.delete{
+  padding: 11px 15px;
+background-color: #007bff;
+color: white;
+border: none;
+cursor: pointer;
+float: left;
+text-align: center;
+}
+a{
+  padding: 10px 15px;
+  background-color: #ac1176;
+  color: white;
+  border: none;
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  text-align: center;
+  }
+
+.comdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
+.comdivv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
+
+.signoutcss{
+padding: 15px 15px;
+background-color: #007bff;
+color: white;
+border: none;
+cursor: pointer;
+float: right;
+background-color: blue;
+color: white;
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+position: absolute;
+right: 4px; /* Adjust the right value to move the button */
+top: 3.5%; /* Vertically center the button */
+transform: translateY(-50%);
+
+}
+
+.notice {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+}
+
+.submitt{
+  padding: 10px 15px;
+background-color: #2d1fc5;
+color: white;
+border: none;
+cursor: pointer;
+float: left;
+text-align: center;
+}
+
+h1{
+  text-align: center;
+  color: #591665;
+  font-family: 'roboto', sans-serif;
+}
+
+h3{
+  font-family: 'Open Sans',sans-serif;
+  color: #000000;
+}
+
+
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;}
+
+
+.searchcss{
+  padding: 10px 15px;
+  background-color: #11ac14;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  text-align: center;
+}
+
+.iconbutt{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+margin-left: 0px;
+
+}
+

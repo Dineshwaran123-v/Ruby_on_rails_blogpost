@@ -1,0 +1,16 @@
+<div id="comment-<%= comment.id %>">
+
+<%= comment.user.username %>
+[<%= time_ago_in_words(comment.created_at) %>]
+
+<% if current_user && current_user == comment.user %>
+
+<%= button_to "Delete", blogpost_comment_path(@blogpost, comment),
+method: :delete, remote: true, style: 'float: right' %>
+<% end %>
+<hr>
+
+<%= comment.body %>
+<br><br>
+
+</div>

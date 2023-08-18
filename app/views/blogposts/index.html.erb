@@ -1,0 +1,30 @@
+
+<br>
+<h1>All Blog</h1>
+  <form action="/search">
+    <input name= "q" type= "text" arial label="search" >
+    <button type="submit">Search</button>
+  </form>
+<table >
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>content</th>
+      <th></th>
+      <th>categories</th>
+    </tr>
+  </thead>
+  <h3 style="float: right; margin-top: 0px; border: 2px dotted black">Total no.of post: <%= pluralize(@blogpost.count ,'post') %></h3>
+
+  <tbody>
+      <% @blogpost.each do |i| %>
+      <tr>
+        <td><%= i.title %></td>
+        <td><%= truncate(i.content, :length => 25) %></td>
+        <td><%= link_to "Show more", i %></td>
+        <td><%= i.category %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

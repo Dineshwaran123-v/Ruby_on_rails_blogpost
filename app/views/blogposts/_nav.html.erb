@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="navcss.css">
+</head>
+<body>
+
+<ul class="navbar">
+<% if current_user %>
+<li><%= link_to "Home", blogposts_path %></li>
+  <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+  <li><%= link_to 'Create Post', new_blogpost_path %></li>
+  <li ><%= button_to "Sign out", destroy_user_session_path, class: "signoutcss", method: :delete %></li>
+  <li><form action="/likedpost"><button style="background-color: #ac1176; padding: 15px">My Liked post</button></form>
+  </li>
+  <li><%= link_to 'My blog', myblog_path %></li>
+  <li><%= link_to 'Most Liked blog', mostlikedblog_path %></li>
+
+
+  <% else %>
+
+<li><%= link_to "Home", blogposts_path %></li>
+  <li><%= link_to "Create account",new_user_registration_path %></li>
+  <li><%= link_to "Sign in",new_user_session_path %> <% end %></li>
+  <li><%= link_to 'All blog', allblog_path %></li>
+
+</ul>
+
+</body>
+</html>
+
+  
+  
+  
+
+  
+  

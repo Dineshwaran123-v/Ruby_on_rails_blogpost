@@ -1,0 +1,10 @@
+<br>
+<h1> Most Liked Blog </h1>
+<br><br>
+
+<% @blogpost.each do |i| %>
+<h2><%= link_to i.title, "blogposts/#{i.id}" %></h2><br><br><br><br>
+
+<h3 ><%= i.content %></h3>
+<% end %>
+

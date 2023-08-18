@@ -1,0 +1,10 @@
+<br>
+<h1 style= "text-align: left;">Search results</h1>
+<br><br>
+
+<h3>click on the title to view ====> </h3>
+<br><br>
+
+<% @blogposts.each do |d| %>
+<h2><%= link_to d.title, "blogposts/#{d.id}",class: "searchcss" %> <br><br><br></h2>
+<% end %>

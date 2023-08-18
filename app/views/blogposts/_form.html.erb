@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+    
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+      .container {
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      .form-group {
+          margin-bottom: 15px;
+      }
+      label {
+          display: block;
+          font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+      }
+      button {
+          padding: 10px 15px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          float: left;
+      }
+      button:hover {
+          background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <%= form_with model: @blogpost do |form| %>
+      <% if form.object.errors.any? %>
+        <div>
+          <% form.object.errors.full_messages.each do |message| %>
+            <p><%= message %></p>
+          </div>
+        <% end %>
+      <% end %>
+      <div class="container">
+        <form>
+          <div class="form-group">
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+          </div>
+          <div class="form-group">
+            <%= form.label :content %>
+            <%= form.text_area :content %>
+          </div>
+          <div class="form-group">
+
+            <%= form.number_field :user_id, id: :blogpost_user_id, value:current_user.id, type: :hidden %>
+          </div>
+          <div class="form-group">
+          <%= form.label :category %>
+          <%= form.select :category, options_for_select([['General','General'], ['Sports','Sports'], ['Political', 'Political'], ['Entertainment', 'Entertainment'],['Education','Education'],['others','others']])%>
+          </div>
+          <div>
+            <%= form.submit(html: { class: "submitt" }) %>
+          </div>
+        </form>
+      </div>
+    <% end %>
+  </body>
+</html>
